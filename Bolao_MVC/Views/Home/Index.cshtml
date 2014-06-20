@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Bolão MVC";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>Palpites sem noção, só pela emoção!!!</h2>
+            </hgroup>
+            <p>
+                Bolão MVC.
+            </p>
+        </div>
+    </section>
+}
+<h3>Menu:</h3>
+<nav>
+    <link href="~/Content/Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <ul id="menuBolao" class="nav nav-pills">
+        <li class="active">@Html.ActionLink("Selecao", "Index", "selecao")</li>
+        <li class="active">@Html.ActionLink("Grupo", "Index", "grupo")</li>
+        <li>@Html.ActionLink("Jogo", "Index", "jogo")</li>
+    </ul>
+</nav>

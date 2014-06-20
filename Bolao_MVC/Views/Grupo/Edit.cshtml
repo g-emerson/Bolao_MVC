@@ -1,0 +1,69 @@
+﻿@model Bolao_MVC.Models.Grupo
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Grupo</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Nome)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Nome)
+            @Html.ValidationMessageFor(model => model.Nome)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Time1)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Time1)
+            @Html.ValidationMessageFor(model => model.Time1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Time2)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Time2)
+            @Html.ValidationMessageFor(model => model.Time2)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Time3)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Time3)
+            @Html.ValidationMessageFor(model => model.Time3)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Time4)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Time4)
+            @Html.ValidationMessageFor(model => model.Time4)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

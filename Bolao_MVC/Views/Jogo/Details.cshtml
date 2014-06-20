@@ -1,0 +1,36 @@
+﻿@model Bolao_MVC.Models.Jogo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Jogo</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Data)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Data)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Time1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Time1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Time2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Time2)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

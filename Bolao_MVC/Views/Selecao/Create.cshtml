@@ -1,0 +1,49 @@
+﻿@model Bolao_MVC.Models.Selecao
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Selecao</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Nome)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Nome)
+            @Html.ValidationMessageFor(model => model.Nome)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Continente)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Continente)
+            @Html.ValidationMessageFor(model => model.Continente)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Bandeira)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Bandeira)
+            @Html.ValidationMessageFor(model => model.Bandeira)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+            
+<button class ="btn btn-primary">    @Html.ActionLink("Voltar", "Index")</button>    
+
+        </p>
+    </fieldset>
+}
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

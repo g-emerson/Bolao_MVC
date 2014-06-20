@@ -1,0 +1,53 @@
+﻿@model Bolao_MVC.Models.Jogo
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Jogo</legend>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Data)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Data)
+            @Html.ValidationMessageFor(model => model.Data)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Time1)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Time1)
+            @Html.ValidationMessageFor(model => model.Time1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Time2)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Time2)
+            @Html.ValidationMessageFor(model => model.Time2)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

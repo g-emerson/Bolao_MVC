@@ -1,0 +1,36 @@
+﻿@model Bolao_MVC.Models.Selecao
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Selecao</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Nome)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nome)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Continente)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Continente)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Bandeira)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Bandeira)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
